@@ -1,0 +1,42 @@
+#welcome {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 20px;
+    background-color: grey;
+}
+#article {
+    text-align: center;
+}
+
+#interestDiv {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.interest_card {
+    border: 1px solid black;
+    padding: 20px;
+    background-color: goldenrod;
+    margin-top: 10px;
+}
+
+.hide {
+    display: none;
+}
+
+body {
+    background-color: rgb(110, 138, 161);
+}
+
+#submit {
+    margin-top: 10px;
+}
+#country_select {
+    width: 170px;
+}
+
+fieldset section {
+    margin-top: 20px;
+}
