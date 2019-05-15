@@ -1,1 +1,1 @@
-export default () => console.warn("Hello!");
+export default () => console.log("Hello!");
