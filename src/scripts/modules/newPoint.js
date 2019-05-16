@@ -10,7 +10,7 @@ export const submit = submitBtn.addEventListener("click", function () {
     let interestPlace = document.querySelector("#country_select");
 
     const newInterestObj = {
-        placeId: interestPlace.value,
+        placeId: parseInt(interestPlace.value.split("-")[1]),
         name: interestName.value,
         description: interestDesc.value,
         cost: interestCost.value,
@@ -30,4 +30,5 @@ export const submit = submitBtn.addEventListener("click", function () {
         .then(() => {
             interestsContainer.innerHTML = "";
             renderInterestEntries();
-        })});
+        })
+});
