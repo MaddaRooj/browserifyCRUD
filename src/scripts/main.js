@@ -1,5 +1,12 @@
-import sayHello from "./hello"
-import sayGoodbye from "./goodbye"
+import sayHello from "./modules/hello"
+import sayGoodbye from "./modules/goodbye"
+import {places} from "./modules/countrySelect";
+import {submit} from "./modules/newPoint";
+import {renderInterestEntries} from "./modules/outputDom";
+import {buildInterestDOM} from "./modules/outputDOM";
 
-sayHello()
-sayGoodbye()
+renderInterestEntries();
+submit;
+places;
+sayHello();
+sayGoodbye();
