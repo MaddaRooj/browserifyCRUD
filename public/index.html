@@ -20,23 +20,6 @@
             </div>
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Friends
-                        <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li id="addFriendsBtn"><a href="#">Add Friends</a></li>
-                        <li>
-                            <input class="sectionName hide" , id="searchFriend" type="text" , name="searchFriend">
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tasks
-                        <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li id="addTaskBtn"><a href="#">Add Task</a></li>
-                    </ul>
-                </li>
             </ul>
             <ul id="logout" class="nav navbar-nav navbar-right">
                 <li class="nav navbar-nav navbar-right">
@@ -61,7 +44,7 @@
                     </section>
                     <section class="sectionName">
                         <label for="description">Notes:</label>
-                        <input id="description" class="input" type="text">
+                        <textarea rows="5" cols="50" id="description" class="input" type="text"></textarea>
                     </section>
                     <section id="cost_section" class="costSection">
                         <label for="cost">Price:</label>
