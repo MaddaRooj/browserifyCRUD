@@ -1,5 +1,6 @@
 import { API } from "./apiCalls";
 import {editInterestEntry} from "./editInterest";
+import {editCostEntry} from "./editInterest";
 
 export function renderInterestEntries() {
     fetch("http://localhost:8088/interests")
@@ -33,15 +34,24 @@ export function buildInterestDOM(interest) {
     interestReview.innerHTML = `<p>Review: ${interest.review}</p>`;
 
     let editBtn = document.createElement("button");
-    editBtn.setAttribute("class", "edit_btn");
+    editBtn.setAttribute("class", "btn btn-primary btn-sm");
     editBtn.textContent = "Review";
     editBtn.addEventListener("click", () => {
         console.log(`Edit Interest ${interest.id}`);
         editInterestEntry(interest);
     });
 
+    let editCostBtn = document.createElement("button");
+    editCostBtn.setAttribute("class", "btn btn-success btn-sm");
+    editCostBtn.setAttribute("id", "editCostBtn");
+    editCostBtn.textContent = "Edit $$$";
+    editCostBtn.addEventListener("click", () => {
+        console.log(`Edit Cost of Interest ${interest.id}`);
+        editCostEntry(interest);
+    });
+
     let deleteBtn = document.createElement("button");
-    deleteBtn.setAttribute("class", "delete_btn");
+    deleteBtn.setAttribute("class", "btn btn-danger btn-sm");
     deleteBtn.setAttribute("id", `deleteBtn-${interest.id}`);
     deleteBtn.textContent = "Delete";
     deleteBtn.addEventListener("click", () => {
@@ -62,6 +72,7 @@ export function buildInterestDOM(interest) {
         interestCard.appendChild(interestReview);
     }
     interestCard.appendChild(editBtn);
+    interestCard.appendChild(editCostBtn);
     interestCard.appendChild(deleteBtn);
     interestsContainer.appendChild(interestCard);
 };
